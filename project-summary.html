@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파주 북두칠성 - 프로젝트 발표 자료</title>
+  
+  <!-- Pretendard 폰트 불러오기 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+  <style>
+    /* 1. 글로벌 디자인 시스템 (기업 보고서/발표 톤앤매너) */
+    :root {
+      --font-primary: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      --bg-main: #F8FAFC;         /* 차분한 라이트 쿨그레이 */
+      --bg-card: #FFFFFF;         /* 매끄러운 흰색 카드 */
+      --text-primary: #0F172A;    /* 가독성 높은 딥 차콜 */
+      --text-secondary: #475569;  /* 세컨더리 슬레이트 그레이 */
+      --text-muted: #94A3B8;      /* 캡션/보조 텍스트 */
+      --brand-primary: #1E3A8A;   /* 신뢰감을 주는 딥 네이비 */
+      --brand-accent: #2563EB;    /* 포인트 블루 */
+      --border-color: #E2E8F0;    /* 정갈한 구분선 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.65;
+      letter-spacing: -0.02em; /* 한국어 타이포그래피 최적 자간 */
+      word-break: keep-all;    /* 단어 단위 줄바꿈 */
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* 2. 헤더 섹션 (발표 커버 스타일) */
+    header {
+      border-bottom: 2px solid var(--text-primary);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* 3. 콘텐츠 본문 (카드 및 데이터 그리드) */
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+      margin-bottom: 24px;
+    }
+
+    /* 4. 핵심 지표/데이터 강조 박스 (IR/기획서 전용) */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .metric-box {
+      background: #F1F5F9;
+      padding: 20px;
+      border-radius: 6px;
+      border-left: 4px solid var(--brand-accent);
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .metric-label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* 5. 정갈한 테이블 및 리스트 */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--brand-accent);
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 문서 헤더 -->
+    <header>
+      <span class="category-badge">Executive Summary</span>
+      <h1>파주 북두칠성 프로젝트</h1>
+      <p class="subtitle">지속 가능한 문화 경험 창출 및 마이스(MICE) 연계 전략 발표 자료</p>
+    </header>
+
+    <!-- 섹션 1: 개요 -->
+    <section>
+      <h2 class="section-title">01. 프로젝트 핵심 요약</h2>
+      <div class="card">
+        <p style="margin-bottom: 16px;">
+          본 프로젝트는 파주 지역의 문화적 자원을 체계적으로 분석하여 비즈니스 및 관광 가치를 극대화하는 브랜딩 전략입니다.
+        </p>
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <div class="metric-value">7개</div>
+            <div class="metric-label">주요 거점 연계</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">+45%</div>
+            <div class="metric-label">예상 체류 시간 증가</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 2: 주요 추진 전략 -->
+    <section>
+      <h2 class="section-title">02. 실행 전략</h2>
+      <div class="card">
+        <ul>
+          <li><strong>타겟 맞춤형 경험 설계:</strong> 방문객 동선을 고려한 직관적인 큐레이션 제공</li>
+          <li><strong>브랜드 아이덴티티 강화:</strong> 일관된 톤앤매너를 통한 시각적 신뢰도 확보</li>
+          <li><strong>MICE 연계 확장성:</strong> 파주 지역 내 학술 행사 및 포럼과의 유기적 연결</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 파주 북두칠성 프로젝트. All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
